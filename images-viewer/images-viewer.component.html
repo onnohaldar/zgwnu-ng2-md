@@ -1,3 +1,6 @@
-<div *ngIf="safeImageUrls">
-    <img [src]="safeImageUrls[0]">
+<div *ngIf="safeImageUrls" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="5px" fxLayoutAlign="start stretch"
+    [style.overflow]="overflowStyleSetting" >
+    <md-card fxFlex="initial" fxFlexOffset="5px" *ngFor="let safeImageUrl of safeImageUrls; let i = index;" >
+        <img md-card-image [src]="safeImageUrl">
+    </md-card>
 </div>

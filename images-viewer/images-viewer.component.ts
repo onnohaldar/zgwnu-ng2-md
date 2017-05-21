@@ -11,6 +11,8 @@ export class ImagesViewerComponent implements OnInit {
     
     @Input() safeImageUrls: SafeResourceUrl[]
 
+    overflowStyleSetting: string = 'auto'
+
     constructor() { }
 
     ngOnInit() { 
