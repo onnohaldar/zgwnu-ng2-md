@@ -13,11 +13,13 @@ export class ToolbarService {
     saveButton: ToolbarButtonProperties = new ToolbarButtonProperties(false, 'save')
     sendButton: ToolbarButtonProperties = new ToolbarButtonProperties(false, 'send')
     cancelButton: ToolbarButtonProperties = new ToolbarButtonProperties(false, 'cancel')
+    settingsButton: ToolbarButtonProperties = new ToolbarButtonProperties(false, 'settings')
 
     exitButton: ToolbarButtonProperties = new ToolbarButtonProperties(true, 'exit')
 
     set componentReference(reference: any) {
         this.menuButton.active = true
+        this.settingsButton.active = false
         this.saveButton.active = false
         this.sendButton.active = false
         this.cancelButton.active = false

@@ -15,6 +15,7 @@ export class ToolbarComponent implements OnInit {
   private iconsPath: string = 'assets/icons/material-design/'
   private contentIconsPath: string = this.iconsPath + 'content/'
   private navigationIconsPath = this.iconsPath + 'navigation/'
+  private actionIconsPath = this.iconsPath + 'action/'
 
   constructor(
     public toolbarService: ToolbarService,
@@ -34,6 +35,8 @@ export class ToolbarComponent implements OnInit {
       sanitizer.bypassSecurityTrustResourceUrl(this.navigationIconsPath + 'ic_menu_24px.svg'))
     mdIconRegistry.addSvgIconInNamespace('toolbar', 'send', 
       sanitizer.bypassSecurityTrustResourceUrl(this.contentIconsPath + 'ic_send_24px.svg'))
+    mdIconRegistry.addSvgIconInNamespace('toolbar', 'settings', 
+      sanitizer.bypassSecurityTrustResourceUrl(this.actionIconsPath + 'ic_settings_black_24px.svg'))
   }
 
   ngOnInit():void {
@@ -42,6 +45,10 @@ export class ToolbarComponent implements OnInit {
 
   onClickExit() {
     this.toolbarService.componentReference.onToolbarClickExit()
+  }
+
+  onClickSettings() {
+    this.toolbarService.componentReference.onToolbarClickSettings()
   }
 
   onClickSave() {

@@ -10,6 +10,15 @@
   </span>
 
   <span>
+    <button *ngIf="toolbarService.settingsButton.active" md-icon-button (click)="onClickSettings()"
+      mdTooltip="{{toolbarService.settingsButton.tooltip}}" 
+      [mdTooltipPosition]="toolbarService.settingsButton.tooltipPosition"
+      [disabled]="toolbarService.settingsButton.disabled">
+      <md-icon class="md-24" svgIcon="toolbar:settings"></md-icon>
+    </button>
+  </span>
+
+  <span>
     <button *ngIf="toolbarService.saveButton.active" md-icon-button (click)="onClickSave()"
       mdTooltip="{{toolbarService.saveButton.tooltip}}" 
       [mdTooltipPosition]="toolbarService.saveButton.tooltipPosition"
