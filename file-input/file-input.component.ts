@@ -15,7 +15,7 @@ export class FileInputComponent implements OnInit {
     private fileIconsPath: string = this.iconsPath + 'file/'
 
     @Input() fileInputId: string 
-    @Output() onFileSelected = new EventEmitter<any>()
+    @Output() onFilesSelected = new EventEmitter<FileList>()
 
 
     constructor (
@@ -31,8 +31,9 @@ export class FileInputComponent implements OnInit {
         console.log('BonitaFileUploadComponent');        
     }
   
-    onSelectFile(fileSelectEvent: any) {
-        this.onFileSelected.emit(fileSelectEvent)
+    onSelectFiles(filesSelectEvent: any) {
+        let selectedFiles: FileList = filesSelectEvent.target.files
+        this.onFilesSelected.emit(selectedFiles)
     }
 
 }
