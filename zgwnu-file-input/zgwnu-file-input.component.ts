@@ -5,12 +5,12 @@ import { MdIconRegistry } from '@angular/material'
 
 @Component({
     moduleId: module.id,
-    selector: 'file-input',
-    templateUrl: 'file-input.component.html',
-    styleUrls: [ 'file-input.component.css' ],
+    selector: 'zgwnu-file-input',
+    templateUrl: 'zgwnu-file-input.component.html',
+    styleUrls: [ 'zgwnu-file-input.component.css' ],
 })
 
-export class FileInputComponent implements OnInit {
+export class ZgwnuFileInputComponent implements OnInit {
     private iconsPath: string = 'assets/icons/material-design/'
     private fileIconsPath: string = this.iconsPath + 'file/'
 
@@ -23,12 +23,12 @@ export class FileInputComponent implements OnInit {
         private sanitizer: DomSanitizer, 
     )
     {
-        mdIconRegistry.addSvgIconInNamespace('file_input', 'file_upload', 
+        mdIconRegistry.addSvgIconInNamespace('zgwnu_file_input', 'file_upload', 
             sanitizer.bypassSecurityTrustResourceUrl(this.fileIconsPath + 'ic_file_upload_24px.svg'))
     }
 
     ngOnInit() {
-        console.log('BonitaFileUploadComponent');        
+       
     }
   
     onSelectFiles(filesSelectEvent: any) {

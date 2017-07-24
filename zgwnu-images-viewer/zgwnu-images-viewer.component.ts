@@ -3,11 +3,11 @@ import { SafeResourceUrl } from '@angular/platform-browser'
 
 @Component({
     moduleId: module.id,
-    selector: 'images-viewer',
-    templateUrl: 'images-viewer.component.html',
-    styleUrls: ['images-viewer.component.css']
+    selector: 'zgwnu-images-viewer',
+    templateUrl: 'zgwnu-images-viewer.component.html',
+    styleUrls: ['zgwnu-images-viewer.component.css']
 })
-export class ImagesViewerComponent implements OnInit {
+export class ZgwnuImagesViewerComponent implements OnInit {
     
     @Input() safeImageUrls: SafeResourceUrl[]
 
@@ -16,7 +16,7 @@ export class ImagesViewerComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { 
-        console.log('ImagesViewerComponent.OnInit()')
+        console.log('ZgwnuImagesViewerComponent.OnInit()')
     }
     
 }

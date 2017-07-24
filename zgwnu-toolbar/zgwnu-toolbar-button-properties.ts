@@ -1,6 +1,6 @@
 import { TooltipPosition } from '@angular/material'
 
-export class ToolbarButtonProperties {
+export class ZgwnuToolbarButtonProperties {
     active: boolean
     disabled: boolean = false
     tooltip: string

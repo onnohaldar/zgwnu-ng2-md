@@ -1,5 +1,11 @@
 export * from './datepicker/datepicker.module'
-export * from './images-viewer/images-viewer.component'
-export * from './toolbar/toolbar.component'
-export * from './toolbar/toolbar.service'
-export * from './file-input/file-input.component'
+
+// images viewer
+export * from './zgwnu-images-viewer/zgwnu-images-viewer.component'
+
+// toolbar
+export * from './zgwnu-toolbar/zgwnu-toolbar.component'
+export * from './zgwnu-toolbar/zgwnu-toolbar.service'
+
+// file input
+export * from './zgwnu-file-input/zgwnu-file-input.component'
