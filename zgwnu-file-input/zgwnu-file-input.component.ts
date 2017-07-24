@@ -14,9 +14,10 @@ export class ZgwnuFileInputComponent implements OnInit {
     private iconsPath: string = 'assets/icons/material-design/'
     private fileIconsPath: string = this.iconsPath + 'file/'
 
-    @Input() fileInputId: string 
+    @Input() fileInputId: string
+    @Input() acceptFiles: string
+    @Input() multipleFiles: boolean = false
     @Output() onFilesSelected = new EventEmitter<FileList>()
-
 
     constructor (
         private mdIconRegistry: MdIconRegistry,
